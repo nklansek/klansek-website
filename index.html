@@ -22,7 +22,7 @@
 <body class="bg-zinc-950 text-zinc-200">
 
   <!-- Navigation -->
-  <nav class="fixed top-0 w-full bg-zinc-950/90 backdrop-blur-md z-50 border-b border-zinc-800">
+  <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-zinc-800">
     <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
       <div class="text-2xl font-semibold tracking-tight">Niko Klanšek</div>
       <div class="hidden md:flex space-x-8 text-sm font-medium">
@@ -40,22 +40,34 @@
     </div>
   </nav>
   
-  <!-- Hero - Improved Face Positioning -->
-  <section class="hero-bg min-h-screen flex items-center justify-center text-center px-6 relative">
-    <div class="max-w-4xl z-10">
-      <h1 class="text-6xl md:text-7xl font-bold tracking-tighter mb-4">Niko Klanšek</h1>
+   <!-- Improved Hero - Better Photo Visibility + Text Positioned Lower -->
+  <section class="relative min-h-screen flex items-end justify-center text-center px-6 pb-20 overflow-hidden">
+    <!-- Hero Background Image -->
+    <div class="absolute inset-0 bg-cover bg-center" 
+         style="background-image: url('hero.jpg'); background-position: center 25%;"></div>
+    
+    <!-- Gradient overlay - darker at bottom for text readability, lighter on face -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-4xl">
+      <h1 class="text-6xl md:text-7xl font-bold tracking-tighter mb-4 text-white">Niko Klanšek</h1>
       <p class="text-3xl text-emerald-300 mb-6">Investor • Entrepreneur • Crowdfunding Pioneer • Basketball Leader</p>
-      <p class="max-w-2xl mx-auto text-lg text-zinc-300 mb-12">
-        From raising millions on Kickstarter and building successful startups to leading a Web3 investment DAO and a professional basketball club — I create, invest, and inspire across borders.
+      <p class="max-w-2xl mx-auto text-lg text-zinc-200 mb-10 leading-relaxed">
+        From raising millions on Kickstarter and building successful startups to leading a Web3 investment DAO 
+        and a professional basketball club — I create, invest, and inspire across borders.
       </p>
       <div class="flex flex-wrap gap-4 justify-center">
-        <a href="#ventures" class="bg-emerald-600 hover:bg-emerald-700 px-10 py-4 rounded-full font-semibold text-lg transition">Explore Ventures</a>
-        <a href="https://en.wikipedia.org/wiki/Niko_Klan%C5%A1ek" target="_blank" class="border border-zinc-400 hover:border-white px-10 py-4 rounded-full font-semibold text-lg transition">Wikipedia</a>
+        <a href="#ventures" 
+           class="bg-emerald-600 hover:bg-emerald-700 px-10 py-4 rounded-full font-semibold text-lg transition">
+          Explore Ventures
+        </a>
+        <a href="https://en.wikipedia.org/wiki/Niko_Klan%C5%A1ek" target="_blank"
+           class="border border-white/70 hover:border-white px-10 py-4 rounded-full font-semibold text-lg transition">
+          Wikipedia
+        </a>
       </div>
     </div>
-
-    <!-- Optional subtle overlay to improve readability -->
-    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60"></div>
   </section>
 
   <!-- About -->
