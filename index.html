@@ -9,11 +9,12 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
     body { font-family: 'Inter', sans-serif; }
-    .hero-bg {
-      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('hero.jpg');
+       .hero-bg {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.70)), url('hero.jpg');
       background-size: cover;
-      background-position: center;
+      background-position: center 30%;   /* This moves the image down so your face is better centered */
       background-attachment: fixed;
+      min-height: 100vh;
     }
     section { scroll-margin-top: 80px; }
   </style>
@@ -38,10 +39,10 @@
       </div>
     </div>
   </nav>
-
-  <!-- Hero -->
-  <section class="hero-bg h-screen flex items-center justify-center text-center px-6">
-    <div class="max-w-4xl">
+  
+  <!-- Hero - Improved Face Positioning -->
+  <section class="hero-bg min-h-screen flex items-center justify-center text-center px-6 relative">
+    <div class="max-w-4xl z-10">
       <h1 class="text-6xl md:text-7xl font-bold tracking-tighter mb-4">Niko Klanšek</h1>
       <p class="text-3xl text-emerald-300 mb-6">Investor • Entrepreneur • Crowdfunding Pioneer • Basketball Leader</p>
       <p class="max-w-2xl mx-auto text-lg text-zinc-300 mb-12">
@@ -52,6 +53,9 @@
         <a href="https://en.wikipedia.org/wiki/Niko_Klan%C5%A1ek" target="_blank" class="border border-zinc-400 hover:border-white px-10 py-4 rounded-full font-semibold text-lg transition">Wikipedia</a>
       </div>
     </div>
+
+    <!-- Optional subtle overlay to improve readability -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60"></div>
   </section>
 
   <!-- About -->
